@@ -1,0 +1,1093 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Sep 30 07:11:20 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>1155 seconds (1155008 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test.ordexceedLimit()'><b>ordexceedLimit</b><br>Test class: pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.Button[@index=&apos;3&apos;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: b7cc7a5b-b967-4aae-9425-0aa115d6b3e4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.POS_Order.OrderThroughPosexceedlimit(POS_Order.java:128)
+	at pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test.ordexceedLimit(OrderExceedLimit_Test.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.15 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: b7cc7a5b-b967-4aae-9425-0aa115d6b3e4
+*** Element info: {Using=xpath, value=//android.widget.Button[@index=&apos;3&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace986944742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace986944742'><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.Button[@index=&apos;3&apos;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: b7cc7a5b-b967-4aae-9425-0aa115d6b3e4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.POS_Order.OrderThroughPosexceedlimit(POS_Order.java:128)
+	at pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test.ordexceedLimit(OrderExceedLimit_Test.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.15 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: b7cc7a5b-b967-4aae-9425-0aa115d6b3e4
+*** Element info: {Using=xpath, value=//android.widget.Button[@index=&apos;3&apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>131</td>
+<td>pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test@79e4c792</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test2_SearchProduct()'><b>Test2_SearchProduct</b><br>Test class: pom.UnifiedTara_realnumber_Tests.uploadCSV_Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.42 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+*** Element info: {Using=xpath, value=//android.widget.EditText[@index=&apos;0&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at pom.UnifiedTara.pages.base.BasePage.typeText(BasePage.java:45)
+	at pom.UnifiedTara.pages.AddProduct_Page.SearchProduct(AddProduct_Page.java:426)
+	at pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test2_SearchProduct(uploadCSV_Test.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1970779713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1970779713'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.42 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+*** Element info: {Using=xpath, value=//android.widget.EditText[@index=&apos;0&apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at pom.UnifiedTara.pages.base.BasePage.typeText(BasePage.java:45)
+	at pom.UnifiedTara.pages.AddProduct_Page.SearchProduct(AddProduct_Page.java:426)
+	at pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test2_SearchProduct(uploadCSV_Test.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>14</td>
+<td>pom.UnifiedTara_realnumber_Tests.uploadCSV_Test@75437611</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.voucher_Test.Test2_addvocherPercent()'><b>Test2_addvocherPercent</b><br>Test class: pom.UnifiedTara_realnumber_Tests.voucher_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucher_percent(voucher_page.java:201)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test2_addvocherPercent(voucher_Test.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1356236848", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1356236848'><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucher_percent(voucher_page.java:201)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test2_addvocherPercent(voucher_Test.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>34</td>
+<td>pom.UnifiedTara_realnumber_Tests.voucher_Test@196a42c3</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.voucher_Test.Test1_addvocher()'><b>Test1_addvocher</b><br>Test class: pom.UnifiedTara_realnumber_Tests.voucher_Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=(//android.widget.EditText[@index=&apos;0&apos;])[4]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.clear(Unknown Source)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforType(BasePage.java:101)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucherRP(voucher_page.java:151)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test1_addvocher(voucher_Test.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace467313213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace467313213'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=(//android.widget.EditText[@index=&apos;0&apos;])[4]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.clear(Unknown Source)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforType(BasePage.java:101)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucherRP(voucher_page.java:151)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test1_addvocher(voucher_Test.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>57</td>
+<td>pom.UnifiedTara_realnumber_Tests.voucher_Test@196a42c3</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.voucher_Test.Test4_AddVoucherRP_mapcategory()'><b>Test4_AddVoucherRP_mapcategory</b><br>Test class: pom.UnifiedTara_realnumber_Tests.voucher_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 40 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucherRP_mapcategory(voucher_page.java:341)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test4_AddVoucherRP_mapcategory(voucher_Test.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace842957574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace842957574'><pre>org.openqa.selenium.TimeoutException: Timed out after 40 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.AddVoucherRP_mapcategory(voucher_page.java:341)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test4_AddVoucherRP_mapcategory(voucher_Test.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Add Voucher&quot;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>52</td>
+<td>pom.UnifiedTara_realnumber_Tests.voucher_Test@196a42c3</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test1_UploadCSV()'><b>Test1_UploadCSV</b><br>Test class: pom.UnifiedTara_realnumber_Tests.uploadCSV_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Inventory&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.AddProduct_Page.NavigationTo_addProduct(AddProduct_Page.java:144)
+	at pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test1_UploadCSV(uploadCSV_Test.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Inventory&quot;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace80756779", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace80756779'><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.ImageView[@content-desc=&quot;Inventory&quot;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.AddProduct_Page.NavigationTo_addProduct(AddProduct_Page.java:144)
+	at pom.UnifiedTara_realnumber_Tests.uploadCSV_Test.Test1_UploadCSV(uploadCSV_Test.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 86345426-20fc-4122-8a95-fabfb6d0a846
+*** Element info: {Using=xpath, value=//android.widget.ImageView[@content-desc=&quot;Inventory&quot;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>64</td>
+<td>pom.UnifiedTara_realnumber_Tests.uploadCSV_Test@75437611</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.voucher_Test.Test3_EditVoucher()'><b>Test3_EditVoucher</b><br>Test class: pom.UnifiedTara_realnumber_Tests.voucher_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//android.view.View[@content-desc=&quot;EDIT&quot;])[1]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.EditVoucher(voucher_page.java:268)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test3_EditVoucher(voucher_Test.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=(//android.view.View[@content-desc=&quot;EDIT&quot;])[1]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace61304908", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace61304908'><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//android.view.View[@content-desc=&quot;EDIT&quot;])[1]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.voucher_page.EditVoucher(voucher_page.java:268)
+	at pom.UnifiedTara_realnumber_Tests.voucher_Test.Test3_EditVoucher(voucher_Test.java:43)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.13 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 6efc75e0-7016-4937-918d-f3ea91fa1ffa
+*** Element info: {Using=xpath, value=(//android.view.View[@content-desc=&quot;EDIT&quot;])[1]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>30</td>
+<td>pom.UnifiedTara_realnumber_Tests.voucher_Test@196a42c3</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test.Test1_Inventory_mgt()'><b>Test1_Inventory_mgt</b><br>Test class: pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.Button[@index=&apos;3&apos;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 73ba45df-9833-40f4-ab4c-90b8c774abbe
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.POS_Order.OrderThroughPos_cash(POS_Order.java:81)
+	at pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test.Test1_Inventory_mgt(Inventorymgt_Test.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.09 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 73ba45df-9833-40f4-ab4c-90b8c774abbe
+*** Element info: {Using=xpath, value=//android.widget.Button[@index=&apos;3&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace3392189", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace3392189'><pre>org.openqa.selenium.TimeoutException: Timed out after 20 seconds waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //android.widget.Button[@index=&apos;3&apos;]&apos;
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 73ba45df-9833-40f4-ab4c-90b8c774abbe
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at pom.UnifiedTara.pages.base.BasePage.waitForElementforClick(BasePage.java:93)
+	at pom.UnifiedTara.pages.POS_Order.OrderThroughPos_cash(POS_Order.java:81)
+	at pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test.Test1_Inventory_mgt(Inventorymgt_Test.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.09 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;GVG139&apos;, ip: &apos;192.168.1.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=app.tara.tara_app, statBarHeight=93, noReset=true, viewportRect={top=93, left=0, width=1080, height=2084}, deviceName=9ecba005, platform=LINUX, deviceUDID=9ecba005, desired={appActivity=app.tara.tara_app.MainActivity, appPackage=app.tara.tara_app, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, noReset=true, newCommandTimeout=180, platformVersion=11, browserName=, autoGrantPermissions=true, udid=9ecba005, platformName=Android, deviceName=Redmi sasi}, newCommandTimeout=180, platformVersion=11, webStorageEnabled=false, takesScreenshot=true, browserName=, javascriptEnabled=true, udid=9ecba005, platformName=Android, deviceApiLevel=30, deviceManufacturer=Xiaomi, app=D:\UnifiedTara\apk\app-release_v3.0.3+29.apk, deviceScreenSize=1080x2400, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, appActivity=app.tara.tara_app.MainActivity, pixelRatio=2.75, locationContextEnabled=false, autoGrantPermissions=true, deviceScreenDensity=440, deviceModel=M2101K6P}]
+Session ID: 73ba45df-9833-40f4-ab4c-90b8c774abbe
+*** Element info: {Using=xpath, value=//android.widget.Button[@index=&apos;3&apos;]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:132)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:687)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:680)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 29 more
+</pre></div></td>
+<td>135</td>
+<td>pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test@350aac89</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.Inventorymgt_orderDeclined_Test.Test1_OrderDeclained()'><b>Test1_OrderDeclained</b><br>Test class: pom.UnifiedTara_realnumber_Tests.Inventorymgt_orderDeclined_Test</td>
+<td></td>
+<td>154</td>
+<td>pom.UnifiedTara_realnumber_Tests.Inventorymgt_orderDeclined_Test@1c5920df</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.AddProduct_Test.Test1_addproduct()'><b>Test1_addproduct</b><br>Test class: pom.UnifiedTara_realnumber_Tests.AddProduct_Test</td>
+<td></td>
+<td>92</td>
+<td>pom.UnifiedTara_realnumber_Tests.AddProduct_Test@742ff096</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.AddProduct_Test.Test4_AddProductWithoutName()'><b>Test4_AddProductWithoutName</b><br>Test class: pom.UnifiedTara_realnumber_Tests.AddProduct_Test</td>
+<td></td>
+<td>56</td>
+<td>pom.UnifiedTara_realnumber_Tests.AddProduct_Test@742ff096</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.AddPromotion_Test.Test1_AddPromotion()'><b>Test1_AddPromotion</b><br>Test class: pom.UnifiedTara_realnumber_Tests.AddPromotion_Test</td>
+<td></td>
+<td>75</td>
+<td>pom.UnifiedTara_realnumber_Tests.AddPromotion_Test@4c60d6e9</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.Onboarding_Test.Add_PaymentTest()'><b>Add_PaymentTest</b><br>Test class: pom.UnifiedTara_realnumber_Tests.Onboarding_Test</td>
+<td></td>
+<td>158</td>
+<td>pom.UnifiedTara_realnumber_Tests.Onboarding_Test@3a7442c7</td></tr>
+<tr>
+<td title='pom.UnifiedTara_realnumber_Tests.OutOfStock_Test.Test1_OutOfStock()'><b>Test1_OutOfStock</b><br>Test class: pom.UnifiedTara_realnumber_Tests.OutOfStock_Test</td>
+<td></td>
+<td>93</td>
+<td>pom.UnifiedTara_realnumber_Tests.OutOfStock_Test@17f9d882</td></tr>
+</table><p>
+</body>
+</html>

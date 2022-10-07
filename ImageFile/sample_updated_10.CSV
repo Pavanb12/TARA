@@ -1,0 +1,9 @@
+S No*,Item Name*,Price*,Discounted Price(If any),Tags(Comma Separated),Quantity,Description,Image Url(optional),"Category Id(select from below options)
+For FNB: 9502
+For FMCG: 9509"
+1,bottle,10,,,3,,,9502
+2,Cake,50,,,4,,,9509
+3,PROD3,51,,,5,,,9509
+4,PROD4,52,,,6,,,9509
+5,PROD5,53,,,7,,,9509
+6,PROD6,54,,,8,,,9509

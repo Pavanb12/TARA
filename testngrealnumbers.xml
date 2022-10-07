@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="2" name="Test1"> 
+   <classes>
+    
+  <class name="pom.UnifiedTara_realnumber_Tests.Onboarding_Test"/> 
+    <class name="pom.UnifiedTara_realnumber_Tests.AddProduct_Test"/> 
+    
+    </classes>
+       </test>
+     <test thread-count="1" name="Test2"> 
+    <classes>     
+        <class name="pom.UnifiedTara_realnumber_Tests.Inventorymgt_Test"/> 
+        <class name="pom.UnifiedTara_realnumber_Tests.Inventorymgt_orderDeclined_Test"/>
+        
+         </classes>
+       </test>
+        
+         <test thread-count="1" name="Test3"> 
+    <classes> 
+       
+        <class name="pom.UnifiedTara_realnumber_Tests.OutOfStock_Test"/>  
+         <class name="pom.UnifiedTara_realnumber_Tests.OrderExceedLimit_Test"/>
+         <class name="pom.UnifiedTara_realnumber_Tests.uploadCSV_Test"/> 
+       </classes>
+  </test> 
+       
+     <test thread-count="1" name="Test4"> 
+    <classes>   
+        <class name="pom.UnifiedTara_realnumber_Tests.voucher_Test"/>
+      <class name="pom.UnifiedTara_realnumber_Tests.AddPromotion_Test"/>   
+    <!--  <class name="pom.UnifiedTara_realnumber_Tests.Logout_Test"/>-->
+     </classes>
+  </test> 
+
+ 
+    <!-- Test -->
+</suite> <!-- Suite -->
