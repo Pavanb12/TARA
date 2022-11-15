@@ -5,7 +5,7 @@ public class TMConstants {
 	// App parameters
 		//public static final String APK_PATH = System.getProperty("user.dir")+"\\apk\\merchant-release-uat-Rel-2.1.0.apk";
 	  
-	 public static final String APK_PATH = System.getProperty("user.dir")+"\\apk\\app-release_v35.apk";
+	 public static final String APK_PATH = System.getProperty("user.dir")+"\\apk\\app-release_44.apk";
 	   
 	    public static final String Img_PATH = System.getProperty("user.dir")+"\\ImageFile\\MicrosoftTeams-image.png";
 
@@ -53,7 +53,7 @@ public class TMConstants {
 		public static final String allowmsgpopup= "//android.widget.Button[@index='0']";
 		public static final String ProceedButton = "//android.view.View[@index='3']";
 		public static final String Swithch_Sellar_button = "//android.widget.ImageView[@index='1']";
-		public static final String AddProductButton = "//android.widget.ImageView[@index='4']";
+		public static final String AddProductButton = "//android.widget.ImageView[@index='5']";
 		public static final String Confirm_msg = "//android.view.View[@content-desc='Order Placed\r\n"
                 + "Successfully!']";
 

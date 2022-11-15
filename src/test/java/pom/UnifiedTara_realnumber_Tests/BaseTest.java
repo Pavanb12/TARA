@@ -75,6 +75,15 @@ public class BaseTest extends TMConstants {
 		aDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 	}
+	public void launchBrowser() throws MalformedURLException{
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability("deviceName", TMConstants.RealdeviceName);
+		cap.setCapability("platformVersion",TMConstants.PlatFormVersion);
+		cap.setCapability(CapabilityType.BROWSER_NAME, "Chrome"); 
+		cap.setCapability(CapabilityType.VERSION, "5.1");
+		aDriver = new AndroidDriver<AndroidElement>(new URL(TMConstants.HUB_URL), cap); 
+		 
+		}
 	
     @AfterTest
 	public void quit(){

@@ -19,7 +19,7 @@ public class AddPromotion_Test extends BaseTest {
 		test.log(LogStatus.INFO, "Starting the add promotion test ");
 		launchApp();
 		Thread.sleep(4000);
-//		
+      	System.out.println("Started Add Promotion test!");
 //		OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //		
 //		if(!otppage.isElementPresent(TMConstants.Mobile_Text1)){

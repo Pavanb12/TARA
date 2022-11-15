@@ -42,16 +42,16 @@ public class voucher_Test extends BaseTest{
 			voucher_page vou=new voucher_page(aDriver, test);
             vou.EditVoucher();
 }
-        
-        @Test
-      	public void Test4_AddVoucherRP_mapcategory() throws InterruptedException, IOException {
-      		test = rep.startTest("Voucher Test:");
-      		test.log(LogStatus.INFO, "adding voucher with % ");
-			voucher_page vou=new voucher_page(aDriver, test);
-             vou.AddVoucherRP_mapcategory();
-         }
-        
-        
+//        
+//        @Test
+//      	public void Test4_AddVoucherRP_mapcategory() throws InterruptedException, IOException {
+//      		test = rep.startTest("Voucher Test:");
+//      		test.log(LogStatus.INFO, "adding voucher with % ");
+//			voucher_page vou=new voucher_page(aDriver, test);
+//             vou.AddVoucherRP_mapcategory();
+//         }
+//        
+//        
         
         
         

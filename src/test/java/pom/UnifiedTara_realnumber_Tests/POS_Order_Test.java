@@ -26,7 +26,7 @@ public class POS_Order_Test extends BaseTest{
 			Thread.sleep(4000);
 			OTPread_Page otppage=new OTPread_Page(aDriver, test);
 			otppage.OTPValidationMethod(TMConstants.RealMobileNumber);
-			
+			System.out.println("Started POS Order test!");
 			//Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
 			
 			//adding product to create order.

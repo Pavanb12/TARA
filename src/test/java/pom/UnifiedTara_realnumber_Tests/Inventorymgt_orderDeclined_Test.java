@@ -26,7 +26,7 @@ import pom.UnifiedTara.util.TMConstants;
 
 			launchApp();
 			Thread.sleep(4000);
-			
+			System.out.println("Started Inventory Decline test!");
 //			OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //			
 //			if(!otppage.isElementPresent(TMConstants.Mobile_Text1)){
@@ -40,7 +40,7 @@ import pom.UnifiedTara.util.TMConstants;
 			AddProduct_Page addprod=new AddProduct_Page(aDriver, test);
 			//sp.SwithUser("Merchant");
 			addprod.NavigationTo_addProduct();
-			addprod.AddProductfororder("ProdOrderdeclined", "1000", "10");
+			addprod.AddProductfororder("ProdOrderdeclined", "10000", "10");
 			Thread.sleep(5000);
 			addprod.SearchProduct("ProdOrderdeclined");
 

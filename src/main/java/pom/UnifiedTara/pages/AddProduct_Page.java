@@ -38,16 +38,16 @@ public class AddProduct_Page extends BasePage{
 	@FindBy(xpath="//android.view.View[@index='6']")
     public WebElement Category; 
 		
-	@FindBy(xpath="//android.view.View[@index='3']")
+	@FindBy(xpath="//android.widget.Button[@content-desc=\"Accessories\"]")
     public WebElement category_item;
 	
-	@FindBy(xpath="//android.widget.ImageView[@index='1']")
-    public WebElement category_item_DoneButton;
+	@FindBy(xpath="//android.widget.Button[@content-desc=\"Bottle\"]")
+    public WebElement category_item1;
 	
-	@FindBy(xpath="//android.widget.EditText[@index='7' or @index='6']") 
+	@FindBy(xpath="//android.widget.EditText[@@index='6']") 
     public WebElement Description; 
 	
-	@FindBy(xpath="//android.widget.ImageView[@index='2']")
+	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Done\"]")
     public WebElement Done_Button; 
 	
 	@FindBy(xpath="//android.view.View[index='0']")
@@ -83,7 +83,7 @@ public class AddProduct_Page extends BasePage{
 	   @FindBy(xpath="(//android.widget.ImageView[@index='0'])[2]")
 	    public WebElement Gallery;
 	   
-	   @FindBy(xpath="//android.widget.TextView[contains(@text,\"Template_2022-10-03T16-58-15-274352.jpg\")]")
+	   @FindBy(xpath="//android.widget.TextView[contains(@text,\"Template_2022-11-04T12-02-44-000497.jpg\")]")
 	    public WebElement Select_img;
 	    
 	    @FindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")
@@ -92,13 +92,15 @@ public class AddProduct_Page extends BasePage{
 	    @FindBy(xpath="//android.widget.ImageButton[@content-desc=\"Done\"]")
 	    public WebElement Done;
 	    
-	    @FindBy(xpath="//android.widget.TextView[@content-desc=\"Crop\"]")
+	    @FindBy(xpath="//android.widget.Button[@content-desc=\"Crop\"]")
 	    public WebElement Crop;
 	
 	  //delete element
 	    @FindBy(xpath="(//android.view.View[@index='2'])[2]")
 	    public WebElement delete_icon;
 	    
+	    @FindBy(xpath="//android.widget.ImageView[@content-desc=\"Select\"]")
+	    public WebElement Selectbtn;
 	  //search elements
 	    @FindBy(xpath="//android.widget.EditText[@index='0']")
 	    public WebElement searchText;
@@ -121,8 +123,18 @@ public class AddProduct_Page extends BasePage{
 	    public WebElement uploadButtonele;
 		@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Upload CSV\"]")
 	    public WebElement uploadCSV;
+		
+		@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Add your own\"]")
+	    public WebElement Addown_btn;
+		
+		@FindBy(xpath="//android.widget.EditText[@index='1']")
+	    public WebElement category_txtbox;
+		
+		@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Save\"]")
+	    public WebElement Save_btn;
 
-
+		@FindBy(xpath="//android.view.View[@index='5']")
+	    public WebElement Sub_Category; 
 	  
 		   
 	public AddProduct_Page(AndroidDriver<AndroidElement> aDriver, ExtentTest test){
@@ -188,7 +200,7 @@ public void NavigationTo_Orders() throws InterruptedException {
         
         waitForElementforType(ProductName, 20, "Orange1");
         Thread.sleep(2000);
-        waitForElementforType(ProductPrice, 20, "200");
+        waitForElementforType(ProductPrice, 20, "20000");
         waitForElementforType(DiscountPrice, 20, "150");
 		aDriver.hideKeyboard();
         waitForElementforType(ItemCount, 20, "10");
@@ -198,18 +210,39 @@ public void NavigationTo_Orders() throws InterruptedException {
 		click(Category);
 		Thread.sleep(2000);
 		waitForElementforClick(category_item, 20);
-		waitForElementforClick(category_item_DoneButton, 20);
-
-		aDriver.hideKeyboard();
-
+		waitForElementforClick(Selectbtn, 20);
 		Thread.sleep(2000);
-		//action1.tap(948,2152).perform();
-				
-	    //action.longPress(954, 2084).release().perform();
-        waitForElementforType(Description, 20, "description");
-
 		aDriver.hideKeyboard();
-		//action1.tap(990,2150).perform();
+		TouchAction action = new TouchAction(aDriver);
+        int x = aDriver.manage().window().getSize().getWidth()/2;
+        int y = aDriver.manage().window().getSize().getHeight()/2;
+        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+        Thread.sleep(4000);
+		click(Sub_Category);
+		waitForElementforClick(Addown_btn, 20);
+		 waitForElementforType(category_txtbox, 20, "Bottle");
+		 waitForElementforClick(Save_btn, 20);
+		 Thread.sleep(2000);
+		 aDriver.hideKeyboard();
+		 click(Sub_Category);
+		 waitForElementforClick(category_item1, 20);
+		 waitForElementforClick(Selectbtn, 20);
+		
+		aDriver.hideKeyboard();
+	//	waitForElementforClick(category_item_DoneButton, 20);
+
+	//	aDriver.hideKeyboard();
+
+//		TouchAction action = new TouchAction(aDriver);
+//        int x = aDriver.manage().window().getSize().getWidth()/2;
+//        int y = aDriver.manage().window().getSize().getHeight()/2;
+//        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+        Thread.sleep(4000);
+	     
+    //    waitForElementforType(Description, 20, "description");
+
+	//	aDriver.hideKeyboard();
+		 
 		waitForElementforClick(Done_Button, 10);
 		String toastmessage=captureToastmessage();
 		if(toastmessage.toLowerCase().contains("Added Successfully".toLowerCase())) 
@@ -249,7 +282,7 @@ public void NavigationTo_Orders() throws InterruptedException {
 		typeText(ItemCount,"20");
 		aDriver.hideKeyboard();
 		Thread.sleep(1000);
-		typeText(Description,"description of product edited");
+	//	typeText(Description,"description of product edited");
 		aDriver.hideKeyboard();
 		waitForElementforClick(Done_Button, 10);
 		String toastmessageEdit=captureToastmessage();
@@ -280,7 +313,7 @@ public void NavigationTo_Orders() throws InterruptedException {
         Thread.sleep(2000);
 		test.log(LogStatus.INFO, "Clicking delete product icon");
 		waitForElementforClick(delete_icon, 20);
-		WebElement Yesele=aDriver.findElementByXPath("//android.view.View[@content-desc='Yes']");
+		WebElement Yesele=aDriver.findElementByXPath("//android.widget.Button[@content-desc=\"Yes\"]");
 		waitForElementforClick(Yesele, 20);
 		String toastmessage=captureToastmessage();
 		Thread.sleep(2000);
@@ -312,7 +345,7 @@ public void NavigationTo_Orders() throws InterruptedException {
 		waitForElementforClick(uploadCSVele, 20);
 
 		 test.log(LogStatus.INFO, "clicked on upload CSV");
-		 try {
+		  try {
 	 	
 		waitForElementforClick(uploadCSV, 20);
 
@@ -322,17 +355,17 @@ public void NavigationTo_Orders() throws InterruptedException {
         simpleAlert.accept();
         System.out.println("Unexpected alert accepted");
         } catch (Exception e) {
-        System.out.println("unexpected alert not present");
-    }     
+       System.out.println("unexpected alert not present");
+         
 		Thread.sleep(2000);
 		aDriver.findElementByXPath(" //android.widget.TextView[contains(@text,\"sample_updated20PRODUCTS 2.CSV\")]").click();
-	//	aDriver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/android.widget.LinearLayout").click();
+ 	//	aDriver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/android.widget.LinearLayout").click();
 		 test.log(LogStatus.INFO, "Selected file");
 		 
     	
 	   	
 		waitForElementforClick(uploadButtonele, 20);
-
+        }
 	   	Thread.sleep(3000);
 	   	String toastmessagenamerequired=captureToastmessage();
 		test.log(LogStatus.INFO, toastmessagenamerequired);
@@ -346,6 +379,7 @@ public void NavigationTo_Orders() throws InterruptedException {
 			reportFail("Uploaded CSV Failed");
 			aDriver.navigate().back();
     	}
+        
 		}
 		catch(Exception e)
 		{
@@ -354,7 +388,7 @@ public void NavigationTo_Orders() throws InterruptedException {
 			
 		}
 	    
-		}
+}
 		//       // aDriver.pushFile("/storage/emulated/0/Download/sample_updated1.csv", new File("C:\\Users\\SasikalaMukkara\\Downloads\\sample_updated1.csv"));
 //        //Add a simple assertion
 //        By nextPageHeader = By.cssSelector("h1");
@@ -381,14 +415,21 @@ public void AddProductWithoutName() throws InterruptedException
     waitForElementforType(ItemCount, 20, "10");
 
 	aDriver.hideKeyboard();
-	waitForElementforClick(Category, 20);
-	waitForElementforClick(category_item, 20);
-	waitForElementforClick(category_item_DoneButton, 10);
-	aDriver.hideKeyboard();
-
+	click(Category);
 	Thread.sleep(2000);
-    waitForElementforType(Description, 20, "description of productname1");
-
+	waitForElementforClick(category_item, 20);
+	waitForElementforClick(Selectbtn, 20);
+	Thread.sleep(2000);
+	aDriver.hideKeyboard();
+	TouchAction action = new TouchAction(aDriver);
+    int x = aDriver.manage().window().getSize().getWidth()/2;
+    int y = aDriver.manage().window().getSize().getHeight()/2;
+    action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+    Thread.sleep(4000);
+	click(Sub_Category);
+	 waitForElementforClick(category_item1, 20);
+	 waitForElementforClick(Selectbtn, 20);
+	 
 	aDriver.hideKeyboard();
 	waitForElementforClick(Done_Button, 10);
 	
@@ -408,13 +449,13 @@ public void AddProductWithoutName() throws InterruptedException
     aDriver.hideKeyboard();
 
     waitForElementforType(ProductName, 20, "Orange1");
-
+    Thread.sleep(2000);
     aDriver.hideKeyboard();
 	waitForElementforClick(Done_Button, 10);
 
 String toastmessage=captureToastmessage();
 test.log(LogStatus.INFO, toastmessage);
-if(!toastmessage.toLowerCase().contains("Discounted price cannot be greater than MRP".toLowerCase())) 
+if(!toastmessage.toLowerCase().contains("Product Discounted price cannot be greater than MRP".toLowerCase())) 
 {   
 	reportFail("Test Failed: Discounted price cannot be greater than MRP");
    
@@ -455,11 +496,11 @@ aDriver.hideKeyboard();
 Thread.sleep(2000);
 waitForElementforClick(Category, 20);
 waitForElementforClick(category_item, 20);
-waitForElementforClick(category_item_DoneButton, 20);
+//waitForElementforClick(category_item_DoneButton, 20);
 
-aDriver.hideKeyboard();
-Thread.sleep(2000);
-waitForElementforType(Description, 20, "description");
+//aDriver.hideKeyboard();
+//Thread.sleep(2000);
+//waitForElementforType(Description, 20, "description");
 
 aDriver.hideKeyboard();
 Thread.sleep(2000);
@@ -467,7 +508,7 @@ Thread.sleep(2000);
 waitForElementforClick(Done_Button, 10);
 String toastmessage=captureToastmessage();
 test.log(LogStatus.INFO, toastmessage);
-if(!toastmessage.toLowerCase().contains("Discounted price cannot be greater than MRP".toLowerCase())) 
+if(!toastmessage.toLowerCase().contains("Product Discounted price cannot be greater than MRP".toLowerCase())) 
 {   
 	reportFail("Test Failed: Discounted price cannot be greater than MRP");
    
@@ -518,12 +559,23 @@ public void AddProductfororder(String productname, String price, String quantity
 		aDriver.hideKeyboard();
 
     	Thread.sleep(2000);
-		waitForElementforClick(Category, 20);
-		waitForElementforClick(category_item, 20);
-		waitForElementforClick(category_item_DoneButton, 20);
-
-		aDriver.hideKeyboard();
+    	click(Category);
 		Thread.sleep(2000);
+		waitForElementforClick(category_item, 20);
+		waitForElementforClick(Selectbtn, 20);
+		Thread.sleep(2000);
+		aDriver.hideKeyboard();
+		TouchAction action = new TouchAction(aDriver);
+        int x = aDriver.manage().window().getSize().getWidth()/2;
+        int y = aDriver.manage().window().getSize().getHeight()/2;
+        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+        Thread.sleep(4000);
+		click(Sub_Category);
+		 waitForElementforClick(category_item, 20);
+		 waitForElementforClick(Selectbtn, 20);
+		 Thread.sleep(2000);
+	aDriver.hideKeyboard();
+		
 //		String countis=ItemCount.getText();
 //		System.out.println("Product quantity befor ordering is "+countis);
 	
@@ -566,18 +618,22 @@ public void AddProductfororderoutofstock(String productname, String price, Strin
     aDriver.hideKeyboard();
 
 	Thread.sleep(2000);
-	waitForElementforClick(Category, 20);
+	click(Category);
+	Thread.sleep(2000);
 	waitForElementforClick(category_item, 20);
-	waitForElementforClick(category_item_DoneButton, 20);
-
+	waitForElementforClick(Selectbtn, 20);
+	Thread.sleep(2000);
 	aDriver.hideKeyboard();
-	
-	
-	
-//    String countis=ItemCount.getText();
-//    System.out.println("Product quantity befor ordering is "+countis);
-
-//    test.log(LogStatus.INFO, "product quantity before ordering "+ItemCount.getText());
+	TouchAction action = new TouchAction(aDriver);
+    int x = aDriver.manage().window().getSize().getWidth()/2;
+    int y = aDriver.manage().window().getSize().getHeight()/2;
+    action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+    Thread.sleep(4000);
+	click(Sub_Category);
+	 waitForElementforClick(category_item, 20);
+	 waitForElementforClick(Selectbtn, 20);
+	 Thread.sleep(2000);
+   aDriver.hideKeyboard();
 
     waitForElementforClick(Done_Button, 20);
     Thread.sleep(4000);
@@ -613,16 +669,26 @@ public void AddProductfororderoutofstock(String productname, String price, Strin
         waitForElementforType(ItemCount, 20, quantity);
         aDriver.hideKeyboard();
         Thread.sleep(3000);
-        waitForElementforClick(Category, 40);
-        waitForElementforClick(category_item, 50);
-        Thread.sleep(2000);
-        waitForElementforClick(category_item_DoneButton, 20);
-        aDriver.hideKeyboard();
-        Thread.sleep(2000);
+        click(Category);
+    	Thread.sleep(2000);
+    	waitForElementforClick(category_item, 20);
+    	waitForElementforClick(Selectbtn, 20);
+    	Thread.sleep(2000);
+    	aDriver.hideKeyboard();
+    	TouchAction action = new TouchAction(aDriver);
+        int x = aDriver.manage().window().getSize().getWidth()/2;
+        int y = aDriver.manage().window().getSize().getHeight()/2;
+        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+        Thread.sleep(4000);
+    	click(Sub_Category);
+    	 waitForElementforClick(category_item, 20);
+    	 waitForElementforClick(Selectbtn, 20);
+    	 Thread.sleep(2000);
+       aDriver.hideKeyboard();
         waitForElementforClick(Done_Button, 10);
         Thread.sleep(7000);
         aDriver.navigate().back();
-        waitForElementforClick(POS, 30);
+       // waitForElementforClick(POS, 30);
         Thread.sleep(2000);
         }catch(Exception e)
     	{
@@ -662,7 +728,7 @@ public void AddProductfororderoutofstock(String productname, String price, Strin
 		click(Category);
 		Thread.sleep(2000);
 		waitForElementforClick(category_item, 20);
-		waitForElementforClick(category_item_DoneButton, 20);
+	//	waitForElementforClick(category_item_DoneButton, 20);
 
 		aDriver.hideKeyboard();
 

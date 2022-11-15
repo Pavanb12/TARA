@@ -63,7 +63,7 @@ public class CollectMoney_Page extends BasePage{
 		waitForElementforClick(AddNotes, 20);
 		test.log(LogStatus.INFO, "Adding Notes");
 		typeText(AddNotes, "Adding some notes");
-		
+		aDriver.hideKeyboard();
 		waitForElementforClick(Country_Code, 10);
 		
 		waitForElementforClick(Country_Code91, 20);
@@ -71,7 +71,7 @@ public class CollectMoney_Page extends BasePage{
 		waitForElementforClick(MobileNumber_Text, 20);
 		test.log(LogStatus.INFO, "Enter mobile Number ");
 		typeText(MobileNumber_Text, "8951161170"); 
-		
+		aDriver.hideKeyboard();
 		waitForElementforClick(GenaratePaymentLink, 20);
 		test.log(LogStatus.INFO, "Clicked on Genarate Payment Link");
 		

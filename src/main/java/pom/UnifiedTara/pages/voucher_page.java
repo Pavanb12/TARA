@@ -1,7 +1,10 @@
 package pom.UnifiedTara.pages;
 
+ 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.ITestResult;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -16,7 +19,7 @@ public class voucher_page extends BasePage{
 	    @FindBy(xpath="//android.widget.ImageView[@content-desc='Coupons']")
 	    public WebElement coupons;  
 
-	   @FindBy(xpath="//android.widget.ImageView[@content-desc=\"Add Voucher\"]")
+	   @FindBy(xpath="//android.widget.ImageView[@content-desc='Add Voucher']")
 	    public WebElement addVoucherBtn;
 	    
 	    @FindBy(xpath="//android.widget.EditText[@index='2']")
@@ -31,14 +34,14 @@ public class voucher_page extends BasePage{
 	    @FindBy(xpath="(//android.widget.EditText[@index='0'])[4]")
 	    public WebElement min_amt;
 	    
-	    @FindBy(xpath="//android.view.View[12]")
+	    @FindBy(xpath="//android.view.View[@index=14]")
 	    public WebElement no_of_times;
 	    
-	    @FindBy(xpath="//android.view.View[@index='16']")
+	    @FindBy(xpath="//android.view.View[@index='19']")
 	    public WebElement startDate;
 	    
-	    @FindBy(xpath="//android.view.View[@content-desc=TMConstants.todayDate]")
-	    public WebElement selectstartDate;
+// 	    @FindBy(xpath="//android.view.View[@content-desc=TMConstants.todayDate]")
+// 	    public WebElement selectstartDate;
 	    
 	    @FindBy(xpath="//android.widget.Button[@index='6']")
 	    public WebElement clickok; 
@@ -46,7 +49,7 @@ public class voucher_page extends BasePage{
 	    @FindBy(xpath="//android.widget.Button[@index='3']")
 	    public WebElement NextMonth; 
 	    
-	    @FindBy(xpath="//android.view.View[@index='17]")
+	    @FindBy(xpath="//android.view.View[@index='20']")
 	    public WebElement endDate;
 	    
 	    @FindBy(xpath="//android.view.View[@content-desc=\"Edit Voucher\"]")
@@ -122,52 +125,60 @@ public class voucher_page extends BasePage{
 	    public void AddVoucherRP() throws InterruptedException
 	    {
 	    	        
-	     //   waitForElementforClick(coupons, 20);
+	   
 			test.log(LogStatus.INFO, "clicking add Voucher"); 
 
-	        waitForElementforClick(addVoucherBtn, 20);
+	        waitForElementforClick(addVoucherBtn, 30);
 			test.log(LogStatus.INFO, "Entering add Voucher details"); 
-						
-	      //  waitForElementforClick(percent_button, 20);
-
-	        waitForElementforType(titleTextbox, 20, "DemoVoucherRP");
+	 
+			// typeText(titleTextbox, "DemoVoucherRP");
+			 waitForElementforType(titleTextbox, 30, "DemoVoucherRP");
 	        aDriver.hideKeyboard();
-	        waitForElementforType(maxCapTextbox, 20, "500");
-	        aDriver.hideKeyboard();
-	        waitForElementforType(voucherValue, 20, "50");
-
-	        aDriver.hideKeyboard();
-	        waitForElementforType(min_amt, 20, "50");
-	        Thread.sleep(3000);
-	        aDriver.hideKeyboard();
-	        waitForElementforClick(no_of_times, 20);
 	        
+	      //  typeText(maxCapTextbox, "50");
+	        waitForElementforType(maxCapTextbox, 30, "50");
 	        aDriver.hideKeyboard();
-	        Thread.sleep(200);
-	        waitForElementforClick(startDate, 20);
-	       // waitForElementforClick(selectstartDate, 20);
+	        
+	     //   typeText(voucherValue, "50");
+	        waitForElementforType(voucherValue, 30, "50");
+            aDriver.hideKeyboard();
+            
+         //   typeText(min_amt, "50");
+	       waitForElementforType(min_amt, 30, "50");
+	        aDriver.hideKeyboard();
+	              waitForElementforClick(no_of_times, 30);
+	        aDriver.hideKeyboard();
+	      
+	    	TouchAction action = new TouchAction(aDriver);
+
+			//int endy=aDriver.manage().window().getSize().getHeight()/7;
+	        int x = aDriver.manage().window().getSize().getWidth()/2;
+	        int y = aDriver.manage().window().getSize().getHeight()/2;
+	        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+	        Thread.sleep(4000);
+	        waitForElementforClick(startDate, 30);
+	    //    waitForElementforClick(selectstartDate, 20);
 	        
 	        waitForElementforClick(clickok, 30);
-	        
 	        aDriver.hideKeyboard();
 	        
 	        waitForElementforClick(endDate, 20);
 	        
-	        waitForElementforClick(NextMonth, 20);
+	        waitForElementforClick(NextMonth, 30);
         
 	        waitForElementforClick(selectendDate, 20);
 	        
 	        waitForElementforClick(clickok, 20);
 	        
 	        aDriver.hideKeyboard();
-	        waitForElementforClick(next, 10);
+	        waitForElementforClick(next, 30);
 	        
 			test.log(LogStatus.INFO, "clicking next"); 
 			Thread.sleep(4000);
 
-	        waitForElementforClick(SelectAll_Products, 10);
+	        waitForElementforClick(SelectAll_Products, 20);
 	        
-	        waitForElementforClick(Continue_Button, 10);
+	        waitForElementforClick(Continue_Button, 30);
 			Thread.sleep(8000);
 
 	        String voucherPage=aDriver.getPageSource();
@@ -179,11 +190,12 @@ public class voucher_page extends BasePage{
 	        	reportFail("Voucher Created Failed.");
 	        	
 	        }
-	     			
+	   
 	    }
 	    
 	    public void AddVoucher_percent() throws InterruptedException
 	    {
+	    	 
 	    	        
 			test.log(LogStatus.INFO, "clicking add Voucher to create % type voucher"); 
 
@@ -214,6 +226,14 @@ public class voucher_page extends BasePage{
 	        
 	        aDriver.hideKeyboard();
 	        Thread.sleep(200);
+	        
+	        TouchAction action = new TouchAction(aDriver);
+
+			//int endy=aDriver.manage().window().getSize().getHeight()/7;
+	        int x = aDriver.manage().window().getSize().getWidth()/2;
+	        int y = aDriver.manage().window().getSize().getHeight()/2;
+	        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+	        Thread.sleep(4000);
 	        waitForElementforClick(startDate, 20);
 	       // waitForElementforClick(selectstartDate, 20);
 	        
@@ -229,14 +249,14 @@ public class voucher_page extends BasePage{
 	        waitForElementforClick(clickok, 20);
 	        
 	        aDriver.hideKeyboard();
-	        waitForElementforClick(next, 10);
+	        waitForElementforClick(next, 20);
 	        
 			test.log(LogStatus.INFO, "clicking next"); 
 			Thread.sleep(4000);
 
-	        waitForElementforClick(SelectAll_Products, 10);
+	        waitForElementforClick(SelectAll_Products, 20);
 	        
-	        waitForElementforClick(Continue_Button, 10);
+	        waitForElementforClick(Continue_Button, 20);
 			Thread.sleep(8000);
 
 	        String voucherPage=aDriver.getPageSource();
@@ -249,12 +269,15 @@ public class voucher_page extends BasePage{
 	        	reportFail("Voucher Created Failed.");
 	        	
 	        }
-	  			
-	    }
+	  		 
+	  			 
+	  		}
+	    
 	    
 	    public void EditVoucher() throws InterruptedException
 	    {
-	    	        
+	    	   
+	    		  
 			test.log(LogStatus.INFO, "clicking Edit Voucher"); 
 
 	        waitForElementforClick(EditButton, 20);
@@ -278,35 +301,43 @@ public class voucher_page extends BasePage{
 		        aDriver.hideKeyboard();
 
 		        waitForElementforClick(min_amt, 20);
-		        typeText(min_amt, "100");
+		      //  typeText(min_amt, "100");
 		        
 		        aDriver.hideKeyboard();
-//		        waitForElementforClick(no_of_times, 20);
-//		        
-//		        aDriver.hideKeyboard();
-//		        Thread.sleep(200);
-//		        waitForElementforClick(startDate, 20);
-//		       // waitForElementforClick(selectstartDate, 20);
-//		        
-//		        waitForElementforClick(clickok, 20);
-//		        
-//		        aDriver.hideKeyboard();
-//		        
-//		        waitForElementforClick(endDate, 20);
-//		        waitForElementforClick(selectendDate, 20);
-//		        
-//		        waitForElementforClick(clickok, 20);
-//		        
-//		        aDriver.hideKeyboard();
+		        waitForElementforClick(no_of_times, 20);
+		        
+		        aDriver.hideKeyboard();
+		        Thread.sleep(200);
+		        
+		        TouchAction action = new TouchAction(aDriver);
+		        int x = aDriver.manage().window().getSize().getWidth()/2;
+		        int y = aDriver.manage().window().getSize().getHeight()/2;
+		        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
+		        Thread.sleep(4000);
+		        
+		        waitForElementforClick(startDate, 20);
+		       // waitForElementforClick(selectstartDate, 20);
+		        
+		        waitForElementforClick(clickok, 20);
+		        
+		        aDriver.hideKeyboard();
+		        
+		        waitForElementforClick(endDate, 20);
+		        waitForElementforClick(NextMonth, 20);
+		        waitForElementforClick(selectendDate, 20);
+		        
+		        waitForElementforClick(clickok, 20);
+		        
+		        aDriver.hideKeyboard();
 		        
 				test.log(LogStatus.INFO, "clicking editvoucher"); 
-	          waitForElementforClick(editvoucheButton, 10);
+	          waitForElementforClick(editvoucheButton, 20);
 
 				Thread.sleep(4000);
 
 		        waitForElementforClick(SelectAll_Products, 10);
 		        
-		        waitForElementforClick(Continue_Button, 10);
+		        waitForElementforClick(Continue_Button, 20);
 				Thread.sleep(4000);
 
 		        String voucherPage=aDriver.getPageSource();
@@ -325,9 +356,10 @@ public class voucher_page extends BasePage{
 			}
   
 	        Thread.sleep(7000);
-
+	    	  }
+	         
 			
-	    }
+	   
 	    
 	    public void AddVoucherRP_mapcategory() throws InterruptedException
 	    {
@@ -396,6 +428,7 @@ public class voucher_page extends BasePage{
 	        }
 	     			
 	    }
+	    
 	    
 }
 	

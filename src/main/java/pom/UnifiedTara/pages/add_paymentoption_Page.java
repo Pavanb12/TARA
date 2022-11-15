@@ -28,6 +28,9 @@ public class add_paymentoption_Page extends BasePage {
 	@FindBy(xpath="//android.widget.Button[@index='8']")
     public WebElement Verify_SMS_button;
 	
+	@FindBy(xpath="//android.widget.Button[@index='0']")
+    public WebElement Verify_Cancel;
+	
 	@FindBy(xpath="//android.widget.Button[@index='9']")
     public WebElement Cancel_verifySMS_button;
 	
@@ -67,8 +70,9 @@ public class add_paymentoption_Page extends BasePage {
 	@FindBy(xpath="//android.view.ViewGroup[@index='0']")
     public WebElement BankBRI;
 	
+	 
 	
-	@FindBy(xpath="//android.widget.EditText[@index='1']")
+	@FindBy(xpath="//android.widget.EditText[@text='Search']")
     public WebElement searchbar;
 	
 	
@@ -107,23 +111,7 @@ public void navigateToSwitchuser() throws InterruptedException {
 		
 		test.log(LogStatus.INFO, "Navigating to add Payment OPtion ");
 		Thread.sleep(10000);
-
-//		if(isElementDisplayed(mngcalls_allow_button))
-//		{	
-//		   System.out.println("in if block");
-//		   click(mngcalls_allow_button);
-//  	  	   click(mngSMS_allow_button);
-//		   System.out.println("clicked on calls allow");
-//	
-//		}
-//
-//	    if(isElementDisplayed(Verify_SMS_button))
-//	    {
-//		     waitForElement(Verify_SMS_button, 20);
-//			Alert alert = aDriver.switchTo().alert(); 
-//		     alert.accept();
-//	    }
-	    
+ 
 		waitForElementforClick(Proceed_Button, 20);
 
 		if(isElementDisplayed(mngcalls_allow_button))
@@ -251,6 +239,16 @@ public void navigateToSwitchuser() throws InterruptedException {
 		  
 	    waitForElementforClick(CommonBank, 20);
 	    Thread.sleep(6000);
+	    
+	    waitForElementforClick(Verify_Cancel, 20);
+	  // aDriver.findElementById("//android:id/button1").click();
+	//   Cancel.click();
+//	    if(isElementDisplayed(Verify_Cancel))
+//	    {
+//	    //	waitForElementforClick(Verify_Cancel, 20);
+//			Alert alert = aDriver.switchTo().alert(); 
+//		     alert.dismiss();
+//	    }
 	    WebElement BankAccount= aDriver.findElementByXPath("//android.widget.EditText[@index='3']");
 		WebElement ConfirmBankAccount= aDriver.findElementByXPath("//android.widget.EditText[@index='6']");
 		WebElement Nameofaccount= aDriver.findElementByXPath("//android.widget.EditText[@index='9']");

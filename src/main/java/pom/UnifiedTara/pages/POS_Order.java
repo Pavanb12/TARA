@@ -13,7 +13,7 @@ import pom.UnifiedTara.pages.base.BasePage;
 public class POS_Order extends BasePage{
 	
 
-	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"POS\"]")
+	@FindBy(xpath="//android.widget.ImageView[@content-desc='POS']")
     public WebElement POS;  
 	
 	@FindBy(xpath="(//android.widget.ImageView)[3]")
@@ -129,24 +129,9 @@ public class POS_Order extends BasePage{
 		waitForElementforClick(Increment, 20);
 
 		test.log(LogStatus.INFO, "Increment No of Quantity");
-		waitForElementforClick(Cart, 20);
-		test.log(LogStatus.INFO, "Click On Cart Icon");
 		
-		waitForElementforClick(Mobile_NO, 20);
-		test.log(LogStatus.INFO, "Enter Mobile Number");
-		typeText(Mobile_NO, "9885500017");
-		
-		waitForElementforClick(customer_Name, 20);
-		test.log(LogStatus.INFO, "Enter Customer Name");
-		typeText(customer_Name, "Nan");
-		
-		waitForElementforClick(continuebtn, 20);
-		test.log(LogStatus.INFO, "Click on Continue Button");
-		Thread.sleep(6000);
-		waitForElementforClick(Pay_cash, 20);
-		test.log(LogStatus.INFO, "Select Pay With Cash Option");
 		String toastmessage=captureToastmessage();
-		if(toastmessage.toLowerCase().contains("not in stock".toLowerCase())) 
+		if(toastmessage.toLowerCase().contains("No more quantity left in store".toLowerCase())) 
 		{
 			reportPass(toastmessage);
 		  }
@@ -154,7 +139,32 @@ public class POS_Order extends BasePage{
 			reportFail("should display error message.");
 		    aDriver.navigate().back(); }
 		}		
-		
+//		waitForElementforClick(Cart, 20);
+//		test.log(LogStatus.INFO, "Click On Cart Icon");
+//		
+//		waitForElementforClick(Mobile_NO, 20);
+//		test.log(LogStatus.INFO, "Enter Mobile Number");
+//		typeText(Mobile_NO, "9885500017");
+//		
+//		waitForElementforClick(customer_Name, 20);
+//		test.log(LogStatus.INFO, "Enter Customer Name");
+//		typeText(customer_Name, "Nan");
+//		
+//		waitForElementforClick(continuebtn, 20);
+//		test.log(LogStatus.INFO, "Click on Continue Button");
+//		Thread.sleep(6000);
+//		waitForElementforClick(Pay_cash, 20);
+//		test.log(LogStatus.INFO, "Select Pay With Cash Option");
+//		String toastmessage=captureToastmessage();
+//		if(toastmessage.toLowerCase().contains("not in stock".toLowerCase())) 
+//		{
+//			reportPass(toastmessage);
+//		  }
+//		else {
+//			reportFail("should display error message.");
+//		    aDriver.navigate().back(); }
+//		}		
+//		
 	
 	public void OrderThroughPos_Link() throws InterruptedException
 	{

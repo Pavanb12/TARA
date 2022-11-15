@@ -23,6 +23,7 @@ public class AddProduct_Test extends BaseTest
 		test.log(LogStatus.INFO, "Starting the add product test ");
 		launchApp();
 		Thread.sleep(4000);
+		System.out.println("Started Add Product test!");
 //		OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //	
 //		otppage.OTPValidationMethod(TMConstants.RealMobileNumber);

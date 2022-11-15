@@ -20,6 +20,7 @@ public class Onboarding_Test extends BaseTest {
 		test.log(LogStatus.INFO, "Starting addPayment test ");
 		launchApp();
 		Thread.sleep(4000);
+		System.out.println("Started OnBoarding test!");
 //		OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //	
 //		otppage.OTPValidationMethod(TMConstants.RealMobileNumber);

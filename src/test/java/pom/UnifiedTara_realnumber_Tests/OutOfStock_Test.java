@@ -24,7 +24,7 @@ public class OutOfStock_Test extends BaseTest {
 		Thread.sleep(7000);
 //		OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //		otppage.OTPValidationMethod(TMConstants.RealMobileNumber);
-		
+		System.out.println("Started OutOfStocks test!");
 		//Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
 	
 		AddProduct_Page addprod=new AddProduct_Page(aDriver, test);

@@ -36,13 +36,13 @@ public class StoreCreation_Page extends BasePage {
 	@FindBy(xpath="//android.view.View[@content-desc=\"Gallery\"]")
     public WebElement Gallary; 
 	
-	@FindBy(xpath="//android.widget.TextView[contains(@text,\"Template_2022-10-03T16-58-15-274352.jpg\")]")
+	@FindBy(xpath="//android.widget.TextView[contains(@text,\"Template_2022-11-04T12-02-44-000497.jpg\")]")
     public WebElement Select_img;//com.android.documentsui:id/icon_thumb
     
     @FindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")
     public WebElement Permission;
         
-    @FindBy(xpath="//android.widget.TextView[@content-desc=\"Crop\"]")
+    @FindBy(xpath="//android.widget.Button[@content-desc=\"Crop\"]")
     public WebElement Crop;
 	
 	@FindBy(xpath="//android.view.View[@index='1']")
@@ -51,14 +51,14 @@ public class StoreCreation_Page extends BasePage {
 	@FindBy(xpath="//android.widget.Button[@index='1']")
     public WebElement Next_NavigationButton; 
 	
-	@FindBy(xpath="//android.widget.ImageView[@index='2']")
+	@FindBy(xpath="//android.widget.ImageView[@index='4']")
     public WebElement MerchantUser;
 	
 	
 	@FindBy(xpath="//android.widget.ImageView[@index='1']")
     public WebElement IndividualUser;
 	
-	@FindBy(xpath="//android.view.View[@index='2']")
+	@FindBy(xpath="//android.view.View[@content-desc=\"Skip to Create Webstore\"]")
     public WebElement SkipCreateWebStore ;
 	
 	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Profile\"]")
@@ -68,10 +68,10 @@ public class StoreCreation_Page extends BasePage {
 	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Switch To Seller Profile\"]")
     public WebElement switchtoseller ;
 	
-	@FindBy(xpath="//android.view.View[@content-desc=\"FMCG\"]")
+	@FindBy(xpath="//android.view.View[@content-desc=\"Daily Needs\"]")
     public WebElement category_FMCG ;
 	
-	@FindBy(xpath="//android.view.View[@content-desc=\"Fruits\"]")
+	@FindBy(xpath="//android.widget.Button[@content-desc='Daily Needs']")
     public WebElement SubCategory_Fruits ;
 	
 	@FindBy(xpath="//android.widget.ImageView[@content-desc=\"Select\"]")
@@ -132,12 +132,12 @@ public class StoreCreation_Page extends BasePage {
 		 waitForElementforClick(SkipCreateWebStore, 20);
 		 waitForElementforClick(StoreLogo, 20);
 		 waitForElementforClick(Gallary, 20);
-		 waitForElementforClick(Select_img, 20);
-		 waitForElementforClick(Crop, 20);
+		 waitForElementforClick(Select_img, 30);
+		 waitForElementforClick(Crop, 30);
 		Thread.sleep(3000);
-		waitForElementforClick(StoreBanner, 20);
-		waitForElementforClick(Gallary, 20);
-		waitForElementforClick(Select_img, 20);
+		waitForElementforClick(StoreBanner, 30);
+		waitForElementforClick(Gallary, 30);
+		waitForElementforClick(Select_img, 30);
 		waitForElementforClick(Crop, 20);
 		Thread.sleep(3000);
 		waitForElementforClick(Store_Name, 20);
@@ -150,7 +150,7 @@ public class StoreCreation_Page extends BasePage {
 		Thread.sleep(5000);
 		click(subcategory);
 		Thread.sleep(5000);
-		waitForElementforClick(SubCategory_Fruits, 10);
+		waitForElementforClick(SubCategory_Fruits, 20);
 		click(DoneButton);
 	//	typeText(Name,"Vardhan");
 		aDriver.hideKeyboard();

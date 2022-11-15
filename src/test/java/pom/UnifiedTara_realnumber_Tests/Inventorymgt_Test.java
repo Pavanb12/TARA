@@ -24,7 +24,7 @@ public class Inventorymgt_Test extends BaseTest {
 		System.out.println("Starting inventory mgt test ");
 		launchApp();
 		Thread.sleep(4000);
-			
+		System.out.println("Started InventoryMgt test!");
 //		OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //		
 //		if(!otppage.isElementPresent(TMConstants.Mobile_Text1)){
@@ -38,7 +38,7 @@ public class Inventorymgt_Test extends BaseTest {
 		AddProduct_Page addprod=new AddProduct_Page(aDriver, test);
 		//sp.SwithUser("Merchant");
 		addprod.NavigationTo_addProduct();
-		addprod.AddProductfororder("TestProdforcountChk", "1000", "10");
+		addprod.AddProductfororder("TestProdforcountChk", "10000", "10");
 		Thread.sleep(5000);
 		addprod.SearchProduct("TestProdforcountChk");
 		WebElement productstirng=aDriver.findElementByXPath("//android.view.View[contains(@content-desc,'TestProdforcountChk')]");

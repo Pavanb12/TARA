@@ -19,6 +19,7 @@ public class OrderExceedLimit_Test extends BaseTest {
 	test.log(LogStatus.INFO, "Starting Exceed limit test ");
 	System.out.println("Starting Exceed limit test ");
 	launchApp();
+	System.out.println("Started OrderExceeed Limit test!");
 	Thread.sleep(7000);
 //	OTPread_Page otppage=new OTPread_Page(aDriver, test);
 //	otppage.OTPValidationMethod(TMConstants.RealMobileNumber);
@@ -26,7 +27,7 @@ public class OrderExceedLimit_Test extends BaseTest {
 	AddProduct_Page addprod=new AddProduct_Page(aDriver, test);
 	//sp.SwithUser("Merchant");
 	addprod.NavigationTo_addProduct();
-	addprod.AddProductforexceedlimit("pdcexceedlimit", "1000", "1000", "1");
+	addprod.AddProductforexceedlimit("pdcexceedlimit", "10000", "1000", "1");
 	POS_Order po=new POS_Order(aDriver, test);
 	po.SearchProduct("pdcexceedlimit");
 	po.OrderThroughPosexceedlimit();
