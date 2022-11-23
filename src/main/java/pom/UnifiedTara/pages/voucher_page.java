@@ -219,7 +219,6 @@ public class voucher_page extends BasePage{
 
 	        
 	        waitForElementforType(min_amt, 20, "500");
-
 	        
 	        aDriver.hideKeyboard();
 	        waitForElementforClick(no_of_times, 20);
@@ -300,14 +299,14 @@ public class voucher_page extends BasePage{
 	        
 		        aDriver.hideKeyboard();
 
-		        waitForElementforClick(min_amt, 20);
+		        waitForElementforType(min_amt, 20,"5");
 		      //  typeText(min_amt, "100");
 		        
 		        aDriver.hideKeyboard();
-		        waitForElementforClick(no_of_times, 20);
-		        
-		        aDriver.hideKeyboard();
-		        Thread.sleep(200);
+//		        waitForElementforClick(no_of_times, 20);
+//		        
+//		        aDriver.hideKeyboard();
+//		        Thread.sleep(200);
 		        
 		        TouchAction action = new TouchAction(aDriver);
 		        int x = aDriver.manage().window().getSize().getWidth()/2;
@@ -315,20 +314,20 @@ public class voucher_page extends BasePage{
 		        action.longPress(x, y).moveTo(x, y-(y)).release().perform();
 		        Thread.sleep(4000);
 		        
-		        waitForElementforClick(startDate, 20);
-		       // waitForElementforClick(selectstartDate, 20);
-		        
-		        waitForElementforClick(clickok, 20);
-		        
-		        aDriver.hideKeyboard();
-		        
-		        waitForElementforClick(endDate, 20);
-		        waitForElementforClick(NextMonth, 20);
-		        waitForElementforClick(selectendDate, 20);
-		        
-		        waitForElementforClick(clickok, 20);
-		        
-		        aDriver.hideKeyboard();
+//		        waitForElementforClick(startDate, 20);
+//		       // waitForElementforClick(selectstartDate, 20);
+//		        
+//		        waitForElementforClick(clickok, 20);
+//		        
+//		        aDriver.hideKeyboard();
+//		        
+//		        waitForElementforClick(endDate, 20);
+//		        waitForElementforClick(NextMonth, 20);
+//		        waitForElementforClick(selectendDate, 20);
+//		        
+//		        waitForElementforClick(clickok, 20);
+//		        
+//		        aDriver.hideKeyboard();
 		        
 				test.log(LogStatus.INFO, "clicking editvoucher"); 
 	          waitForElementforClick(editvoucheButton, 20);

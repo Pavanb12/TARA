@@ -221,10 +221,10 @@ public void NavigationTo_Orders() throws InterruptedException {
 		click(Sub_Category);
 		waitForElementforClick(Addown_btn, 20);
 		 waitForElementforType(category_txtbox, 20, "Bottle");
-		 waitForElementforClick(Save_btn, 20);
+		waitForElementforClick(Save_btn, 20);
 		 Thread.sleep(2000);
-		 aDriver.hideKeyboard();
-		 click(Sub_Category);
+		// aDriver.hideKeyboard();
+	//	 click(Sub_Category);
 		 waitForElementforClick(category_item1, 20);
 		 waitForElementforClick(Selectbtn, 20);
 		
@@ -445,6 +445,8 @@ public void AddProductWithoutName() throws InterruptedException
 	Thread.sleep(2000);
 	test.log(LogStatus.INFO, "Adding more discount than price");
 
+	 
+    
     waitForElementforType(DiscountPrice, 20, "350");
     aDriver.hideKeyboard();
 
@@ -455,7 +457,7 @@ public void AddProductWithoutName() throws InterruptedException
 
 String toastmessage=captureToastmessage();
 test.log(LogStatus.INFO, toastmessage);
-if(!toastmessage.toLowerCase().contains("Product Discounted price cannot be greater than MRP".toLowerCase())) 
+if(!toastmessage.toLowerCase().contains("Discounted price cannot be greater than MRP".toLowerCase())) 
 {   
 	reportFail("Test Failed: Discounted price cannot be greater than MRP");
    
@@ -571,7 +573,7 @@ public void AddProductfororder(String productname, String price, String quantity
         action.longPress(x, y).moveTo(x, y-(y)).release().perform();
         Thread.sleep(4000);
 		click(Sub_Category);
-		 waitForElementforClick(category_item, 20);
+		 waitForElementforClick(category_item1, 20);
 		 waitForElementforClick(Selectbtn, 20);
 		 Thread.sleep(2000);
 	aDriver.hideKeyboard();
@@ -630,7 +632,7 @@ public void AddProductfororderoutofstock(String productname, String price, Strin
     action.longPress(x, y).moveTo(x, y-(y)).release().perform();
     Thread.sleep(4000);
 	click(Sub_Category);
-	 waitForElementforClick(category_item, 20);
+	 waitForElementforClick(category_item1, 20);
 	 waitForElementforClick(Selectbtn, 20);
 	 Thread.sleep(2000);
    aDriver.hideKeyboard();
@@ -681,7 +683,7 @@ public void AddProductfororderoutofstock(String productname, String price, Strin
         action.longPress(x, y).moveTo(x, y-(y)).release().perform();
         Thread.sleep(4000);
     	click(Sub_Category);
-    	 waitForElementforClick(category_item, 20);
+    	 waitForElementforClick(category_item1, 20);
     	 waitForElementforClick(Selectbtn, 20);
     	 Thread.sleep(2000);
        aDriver.hideKeyboard();

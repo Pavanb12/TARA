@@ -15,7 +15,7 @@ public class SendMoney_Page extends BasePage {
 	 @FindBy(xpath="//android.widget.ImageView[@content-desc=\"Send Money\"]")
 	    public WebElement SendMoney; 
 	    
-	    @FindBy(xpath="(//android.widget.ImageView[@content-desc=\"Pay Now\"])[1]")
+	    @FindBy(xpath="//android.widget.ImageView[@content-desc=\"Pay Now\"]")
 		public WebElement PayNow;
 	    
 	    @FindBy(xpath="//android.view.View[@content-desc=\"Payment Options \"]")
